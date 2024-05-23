@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade  </h1>
+Vivendo em país <input type="string" name="nome" id="nome">
+<input type="button" value="Verificar" id="Verificar" onclick="pesquisar()"  >
+<div id="res"></div>
+
+<script>
+    function pesquisar() {
+        var tnome= window.document.querySelector('input#nome')
+        var res = window.documento.querySelector('div#res')
+        var Nacionalidade = String(tnome.value)
+        res.innerHTML = `<p> Vivendo no ${Nacionalidade} `;
+            if (Nacionalidade== Brasil){ `você é brasileiro `}
+
+
+
+
+    }
+
+</script>
+
+    
+</body>
+</html>
