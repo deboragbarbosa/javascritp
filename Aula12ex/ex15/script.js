@@ -1,4 +1,4 @@
-function verificar(){
+function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
@@ -14,6 +14,7 @@ function verificar(){
             gênero = 'Homem'
             if(idade >=0 && idade < 10){
                 //Criança
+                img.setAttribute('src','homembebecerto1.png')
             } else if (idade <21){
                 //jovem 
             } else if (idade < 50){
@@ -21,8 +22,22 @@ function verificar(){
             } else {
                 //Idoso
             }
+            
 
+        } else if (fsex[1].checked) {
+            genero = 'Mulher'
+            if(idade >=0 && idade < 10){
+                //Criança
+            } else if (idade <21){
+                //jovem 
+            } else if (idade < 50){
+                //Adulto
+            } else {
+                //Idoso
+            }
         }
+        res.computedStyleMap.texAling = 'center'
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos` 
     }
     
 }
